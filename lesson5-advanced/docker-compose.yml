@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  lesson:
+    image: alpine:latest
+    container_name: lesson5
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    command: sh -c "sleep infinity"
+
+    # This service provides an Alpine shell for exploring piping, processes and
+    # environment variables.  Use `docker compose exec lesson ash` to enter.

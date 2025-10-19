@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  lesson:
+    image: alpine:latest
+    container_name: lesson2
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    command: sh -c "sleep infinity"
+
+    # Use `docker compose exec lesson ash` to enter the container and practice commands.

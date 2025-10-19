@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  lesson:
+    image: alpine:latest
+    container_name: lesson4
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    command: sh -c "sleep infinity"
+
+    # This container gives you a safe sandbox to experiment with permissions.

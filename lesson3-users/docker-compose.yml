@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  lesson:
+    image: alpine:latest
+    container_name: lesson3
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    command: sh -c "sleep infinity"
+
+    # Use `docker compose exec lesson ash` to interact with the container.  Note
+    # that creating and modifying users inside a container does not affect
+    # your host system.

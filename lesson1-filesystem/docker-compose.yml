@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  lesson:
+    image: alpine:latest
+    container_name: lesson1
+    working_dir: /workspace
+    volumes:
+      - ./workspace:/workspace
+    tty: true
+    command: sh -c "sleep infinity"
+
+    # You can override the command by running `docker compose exec lesson ash`
+    # to start a shell.  The volume `./workspace` is created automatically
+    # the first time you run the container and gives you a place to create
+    # files for the exercises.
